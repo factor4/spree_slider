@@ -1,8 +1,6 @@
-<%= render :partial => 'spree/admin/shared/configuration_menu' %>
-
 <h1><%= t(:slide) %></h1>
 
-<table>
+<table class="table">
   <tr data-hook="product_id">
     <th><%= t(:product) %></th>
     <td>
@@ -48,6 +46,6 @@
 </table>
 
 <p>
-  <%= link_to_edit @slide, :class => 'edit_slide' %> <%= t(:or) %>
+  <%= link_to_edit @slide, class: 'edit_slide' %> <%= t(:or) %>
   <%= link_to t(:back), collection_url %>
 </p>
