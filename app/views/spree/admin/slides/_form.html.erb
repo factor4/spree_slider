@@ -48,19 +48,19 @@
   </div>
 
   <div class="col-md-6">
-    <%= f.field_container :image do %>
-      <%= f.label :image, t(:image) %> <i>(<%= t('spree_slider.image_tip') %>)</i><br>
-      <%= f.file_field :image %>
+    <%= f.field_container :attachment do %>
+      <%= f.label :attachment, t(:image) %> <i>(<%= t('spree_slider.image_tip') %>)</i><br>
+      <%= f.file_field :attachment %>
     <% end %>
   </div>
 
   <div class="col-md-6">
     <%= f.field_container :image do %>
-      <% if f.object.image? %>
+      <% if f.object.image.present? %>
         <p>
           <%= label_tag t(:preview) %>
           <br>
-          <%= image_tag f.object.image, class: 'img-responsive' %>
+          <%= image_tag main_app.url_for(f.object.slide_image.try(:attachment)), class: 'img-responsive' %>
         </p>
       <% end %>
     <% end %>

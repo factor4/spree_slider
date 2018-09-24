@@ -5,6 +5,7 @@ de:
   body: "Körper"
   link_url: "Link URL"
   image: "Bild"
+  preview: "Vorschau"
   image_file_name: "Name der Bilddatei"
   published: "Veröffentlicht"
   position: "Position"

@@ -8,7 +8,7 @@
 
 <%= render 'spree/shared/error_messages', target: @slide %>
 
-<%= form_for [:admin, @slide] , html: { multipart: true } do |f| %>
+<%= form_for [:admin, @slide] do |f| %>
   <fieldset class="no-border-top">
     <%= render partial: 'form', locals: { f: f } %>
 
